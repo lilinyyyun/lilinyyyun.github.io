@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Day 13 烦 | Gridea</title>
+<link rel="shortcut icon" href="https://lilinyyyun.github.io/favicon.ico?v=1668158980398">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://lilinyyyun.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Day 13 烦 | Gridea - Atom Feed" href="https://lilinyyyun.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="心烦，超级心烦，心烦意乱。为什么每次和gdy聊完都不开心，他明明什么也没有说啊，很nice地在讲解决方法。但是事后我就烦得不行，他到底有什么磁场。我这份工作，到底让我学会了什么，学会了发鼠标，学会了在his里录数据，学会了在kunlun里录..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://lilinyyyun.github.io">
+  <img class="avatar" src="https://lilinyyyun.github.io/images/avatar.png?v=1668158980398" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Day 13 烦
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-08-18
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>心烦，超级心烦，心烦意乱。为什么每次和gdy聊完都不开心，他明明什么也没有说啊，很nice地在讲解决方法。但是事后我就烦得不行，他到底有什么磁场。我这份工作，到底让我学会了什么，学会了发鼠标，学会了在his里录数据，学会了在kunlun里录数据。哎，我真的不知道我现在出去面试要说我这两年做了什么，其实什么都没做，到现在为止，一点自己的基础工作都没有，也没有任何地盘。我离职，不需要交接任何工作，走就完事了，没有任何一个环节会卡住，没有任何一项工作会缺失。作为一个“高材生”，我做的东西没有任何技术含量，有技术含量的我又做不了。读书有何用？马上入职两周年了，我到底在干什么，我还是说不出我到底在做什么，我能做什么，做的最多的就是，录数据吧，我能不出错地把数据从表里录到系统里，不凭借导入，这就是我对自己最自信的工作，多么地讽刺啊。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://lilinyyyun.github.io/post/day-12-hun-luan/">
+              <h3 class="post-title">
+                Day 12 混乱
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://lilinyyyun.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

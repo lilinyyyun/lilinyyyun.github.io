@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Day18 不是滋味 | Gridea</title>
+<link rel="shortcut icon" href="https://lilinyyyun.github.io/favicon.ico?v=1668158980398">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://lilinyyyun.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Day18 不是滋味 | Gridea - Atom Feed" href="https://lilinyyyun.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="SF的公租房下来了，作为朋友我确实应该为她感到高兴。之前我就各种说她房子下来以后租我一个卧室，都一直没有得到正面回应。今天算是真的明白了，不是一家人就是不是一家人，人家的房子凭什么租给你住，人家都没有邀请你去她家玩。哎，其实真正的朋友真的没..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://lilinyyyun.github.io">
+  <img class="avatar" src="https://lilinyyyun.github.io/images/avatar.png?v=1668158980398" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Day18 不是滋味
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-09-15
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>SF的公租房下来了，作为朋友我确实应该为她感到高兴。之前我就各种说她房子下来以后租我一个卧室，都一直没有得到正面回应。今天算是真的明白了，不是一家人就是不是一家人，人家的房子凭什么租给你住，人家都没有邀请你去她家玩。哎，其实真正的朋友真的没有，CN还是最好的，说给我住她家就给，也不知道是不是性格不同以及云南人更加好客一点。虽然现在和CN人生轨迹越走越远，但是心还是近的。都说只有家人会希望你过得好，其他人只会希望你过得不好，过得好会产生嫉妒。我倒也不是嫉妒，一个公租房而已，虽然不让我住是本份，只是自认为我们的关系能达到情分的部分，看来还是我想多了。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://lilinyyyun.github.io/post/day-17-dui-xian-zhuang-de-bu-an/">
+              <h3 class="post-title">
+                Day 17 对现状的不安
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://lilinyyyun.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

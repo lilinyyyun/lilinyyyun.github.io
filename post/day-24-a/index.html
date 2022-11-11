@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Day 24 啊 | Gridea</title>
+<link rel="shortcut icon" href="https://lilinyyyun.github.io/favicon.ico?v=1668158980398">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://lilinyyyun.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Day 24 啊 | Gridea - Atom Feed" href="https://lilinyyyun.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="啊啊啊，这东西竟然不能自己保存，昨天写了一堆东西，没点保存直接关了窗口，现在打开啥也没了。嘤嘤嘤！还想给昨天写个结尾呢，昨天的思路写一半被居家了，哭了。
+今天看都在说房补的事，不论是什么改变，总有人支持有人反对，以前一些人想要6点吃饭，也有..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://lilinyyyun.github.io">
+  <img class="avatar" src="https://lilinyyyun.github.io/images/avatar.png?v=1668158980398" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Day 24 啊
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-11-11
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>啊啊啊，这东西竟然不能自己保存，昨天写了一堆东西，没点保存直接关了窗口，现在打开啥也没了。嘤嘤嘤！还想给昨天写个结尾呢，昨天的思路写一半被居家了，哭了。<br>
+今天看都在说房补的事，不论是什么改变，总有人支持有人反对，以前一些人想要6点吃饭，也有人站出来反对，这次更是，全在杠说房租会降的人，“不降你给我补吗？”“你给我找2500的房？”“你去跟我房东说？”。。我真的大无语，微博上看见这种言论就算了，公司筛选过的人，还这样。供应关系不就是这样的吗，到底是咋了。<br>
+让我不理解的事，这个事不支持的人占上风，也是，毕竟影响了他们的利益，但是换种形式不也挺好的吗。就像之前说食堂很多人不吃蛋黄的，竟然也是不吃的人占上风，不吃的人有理，可惜浪费粮食的人竟然成了被攻击的对象，我不理解这世界怎么了。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://lilinyyyun.github.io/post/book-1-chang-an-de-li-zhi-ma-bo-yong/">
+              <h3 class="post-title">
+                Book 1 长安的荔枝-马伯庸
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://lilinyyyun.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
